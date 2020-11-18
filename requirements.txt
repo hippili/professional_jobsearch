@@ -1,3 +1,8 @@
 Django==3.0.3
+<<<<<<< HEAD
 
 whitenoise
+=======
+whitenoise
+django-crispy-forms
+>>>>>>> 79c8ab12e78b65dc39e4a4ada53ddd7e09f7bb14
