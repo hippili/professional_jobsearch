@@ -1,0 +1,11 @@
+{% extends 'Jobsearch/base.html' %}
+{% load crispy_forms_filters %}
+{% block body_content %}
+<h2 class="text-center">Add Profile</h2>
+<h3 class="text-right"><a href="{% url 'Jobsearch:add_user' %}" >+ Add User</a></h3>
+<form method="post" action="">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Create new user account" />
+</form>
+{% endblock body_content%}

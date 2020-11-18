@@ -1,0 +1,58 @@
+{% extends 'Jobsearch/base.html' %}
+{% load crispy_forms_tags %}
+{% block body_content %}
+{% load static %}
+<div class="content container" style="background-color: #91B0D5;">
+    <div class="row">
+        <div class="col-md-10">
+            {% block content %}
+            <div class="links">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+
+                            <!--<img src="{% static "images/Marketplace.png " %}" alt="marketplace"/>-->
+                            <div class="caption" style="margin-top:200px">
+                                <a href="{% url 'Jobsearch:jobs_list'%}">
+                                <h2>Job Vacancies</h2></a>
+                                <img src="https://dpnsee.org/wp-content/uploads/2020/01/Job-vacancy.jpg" style="width:70%">
+                                <p>Hiring the correct Candidates for the position is the ultimate Goal </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+
+                            <!-- <img src="{% static "images/Candidate.jpg" %}" alt="candidates"/> -->
+                            <div class="caption" style="margin-top:200px; margin-left:50px;">
+                                
+                                <a href="{% url 'Jobsearch:candidate_list'%}"><h2>Candidates</h2></a>
+                                <img src="https://www.coburgbanks.co.uk/wp-content/uploads/2018/04/interview-candidates-3.jpg" style="width:60%">
+                                <p>Actively looking for a job.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+
+                            <!-- <img src="{% static "images/skillstraining.jpg" %}" alt="lunch"/> -->
+                            <div class="caption" style="margin-top:200px; margin-left:50px;">
+                                <a href="{% url 'Jobsearch:jobs_list'%}"><h2>Skill Training</h2></a>
+                                <img src="https://franchiseindia.s3.ap-south-1.amazonaws.com/uploads/content/wi/art/5a0965f54a5b3.jpg" style="width:70%">
+                                <p>Providing High quality Training</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+{% endblock body_content %}
